@@ -48,7 +48,7 @@ font-family: var(--secondary-font-family);}
     color: var(--main-padge-text-color);
     }
  .current {
- color: red;
+ color:var(--active-color-btm);
  }
 
 .nav-link:hover,
