@@ -11,6 +11,7 @@
     --footer-back: #2F303A;
     --footer-color-registr: rgba(255, 255, 255, 0.6);
     --btm-portf-back: #F5F4FA;
+    --secondary-bgr:#2F303A;
     
 
     
@@ -19,7 +20,8 @@ body {
 font-family:var(--main-font-family);
 color: var(--main-padge-color);
 letter-spacing: 0.03em;
-background-color: var(--main-background-color) ;
+background-color: var(--color-with) ;
+font-size: 14px;
 
 }
 ul {list-style: none;}
@@ -27,12 +29,7 @@ ul {list-style: none;}
 
 /* header */
 
-
-header {
-    letter-spacing: 0.02em;
-    background-color: var(--header-backgr-color);
-    
-}
+   
 .logo {
  font-family: var(--secondary-font-family);
  color: #000000;
@@ -44,21 +41,22 @@ text-decoration: none;
 .blu {
 color: var(--color-btm-logo);
 font-family: var(--secondary-font-family);}
-.nav {
+.nav-link {
     font-weight: 500;
-    font-size: 14px;
     line-height: calc(16 / 14);
     text-decoration: none;
-    color: var(--main-padge-text-color); }
+    color: var(--main-padge-text-color);
+    }
+ .current {
+ text-decoration: underline
+ }
 
-.nav:hover,
-.nav:focus 
+.nav-link:hover,
+.nav-link:focus 
 {color: var(--color-btm-logo);}
-
 .regist {
     color: var(--secondary-padge-color);
     font-weight: 500;
-    font-size: 14px;
     line-height: calc(16 / 14);
     text-decoration: none;}
 .regist:hover,
@@ -69,13 +67,22 @@ font-family: var(--secondary-font-family);}
 
 .hero {
     text-align: center;
+    background-color:var(--secondary-bgr) ;
     }
 .hero-h {
     color: var(--color-with);
         font-weight: 900;
         font-size: 44px;
         line-height: calc(60 / 44);
-        letter-spacing: 0.06em;}
+        letter-spacing: 0.06em;
+        text-transform:uppercase;}
+
+/* Скрытый <h2 class="is-hidden">Особливості</h2> 
+Скрытый <h1 class="is-hidden">Портфоліо</h1>*/
+.is-hidden {
+    visibility: hidden;}
+/* Скрытый <h2 class="is-hidden">Особливості</h2> 
+Скрытый <h1 class="is-hidden">Портфоліо</h1>*/
 
 .hero-btm {
     font-weight: 700;
@@ -90,34 +97,28 @@ font-family: var(--secondary-font-family);}
 .hero-btm:focus {
     background-color: var(--active-color-btm);}
 
- .features-h {
-    font-weight: 700;
-    font-size: 14px;
+ .features-title {
     line-height: calc(16 / 14);
  }
-.features-p {
-    font-size: 14px;
+.features-text {
     line-height: calc(24 / 14);
     color: var(--secondary-padge-color);}
-.wot-we-do, .team {
-    font-weight: 700;
+.title, .team {
     font-size: 36px;
-    line-height: 42px;
+    line-height: calc(42 / 36);
     text-align: center;
 }
-.team-cards {
-    color: var(--color-with);
+
+.team-name {
+    font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
-   
-
-}
-.team-h {
-    font-weight: 500;
     color: var(--main-padge-text-color);
        
 }
-.team-p {
+.team-profession {
+    font-size: 16px;
+    line-height: calc(19 / 16);
     color: var(--secondary-padge-color);
 
     /* footer */
@@ -136,19 +137,17 @@ footer {
     text-decoration: none;} 
 .adress{
         color: var(--color-with);
-        font-size: 14px;
         line-height: calc(24 / 14);
         text-decoration: none;
+        font-style: normal;
 
     }
 .footer-regis {
-    font-size: 14px;
     line-height: calc(24 / 14);
     color: var(--footer-color-registr);
     text-decoration: none;
     } 
-.adress:hover,
-.adress:focus,
+
 .footer-regis:hover,
 .footer-regis:focus
  {
@@ -163,17 +162,18 @@ footer {
     font-size: 16px;
     line-height: 26px;
     background-color:var(--btm-portf-back) ;
+    cursor: pointer;
 }
 .btm:hover,
 .btm:focus {
 background-color: var(--color-btm-logo);
 color: var(--color-with)}
-.prtf-h {
-    font-weight: 700;
+.portfolio-title {
+
     font-size: 18px;
     line-height: calc(36 / 18);
     letter-spacing: 0.06em;}
- .prtf-p {
+ .portfolio-text {
     font-size: 16px;
     line-height: calc(30 / 16);
     color: var(--secondary-padge-color);
